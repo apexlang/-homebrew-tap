@@ -5,21 +5,21 @@
 class Apex < Formula
   desc "A top-down / API-first description language for modeling and generating cloud-native applications"
   homepage "https://github.com/apexlang/cli"
-  version "0.1.1"
+  version "0.1.2"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/apexlang/cli/releases/download/v0.1.1/apex_darwin_amd64.tar.gz"
-      sha256 "9f898f02e2bc00b0211312a5ddbcebced15d4da0073592ca9667248e7b554292"
+    if Hardware::CPU.arm?
+      url "https://github.com/apexlang/cli/releases/download/v0.1.2/apex_darwin_arm64.tar.gz"
+      sha256 "3a8ddff19c355af3d1aa568fd1a0dcea5d216365c16da3e7e220e07ab543e5dc"
 
       def install
         bin.install "apex"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/apexlang/cli/releases/download/v0.1.1/apex_darwin_arm64.tar.gz"
-      sha256 "90e64d6ad90d9e6b6e3dd26495f01dfdf3df76af30d441ea77c0b7ea2be829a7"
+    if Hardware::CPU.intel?
+      url "https://github.com/apexlang/cli/releases/download/v0.1.2/apex_darwin_amd64.tar.gz"
+      sha256 "446b878b65c97c255bac66d0db0c4f2a0e2df40976242f4072b0910cb683284a"
 
       def install
         bin.install "apex"
@@ -29,8 +29,8 @@ class Apex < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/apexlang/cli/releases/download/v0.1.1/apex_linux_amd64.tar.gz"
-      sha256 "0e422162f52a98406da7c86f1bc5897a991f78721d146148bbff40680737e709"
+      url "https://github.com/apexlang/cli/releases/download/v0.1.2/apex_linux_amd64.tar.gz"
+      sha256 "078facc10f361199adb7bfb968bf24f3a1bbbaf7830b380d9ddae96ec7490c3d"
 
       def install
         bin.install "apex"
